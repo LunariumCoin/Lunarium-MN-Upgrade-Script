@@ -34,13 +34,13 @@ function copy_lunarium_binaries(){
 }
 
 function upgrade() {
-  echo -e "${GREEN}This script can only be used to upgrade Lunarium Masternodes to version 1.1 that was previously installed using the offical shell script.${NC}"
+  echo -e "${GREEN}This script can only be used to upgrade Lunarium Masternodes to the latest version that was previously installed using the offical shell script.${NC}"
   if [[ "yes" == $(ask_yes_or_no "Do you wish to upgrade?") ]]
     then
       systemctl stop lunarium.service
       copy_lunarium_binaries
       systemctl start lunarium.service
-      echo -e "${GREEN}If all went well with the upgrade please wait at least five minutes and then re-start the MasterNode from the hot wallet.${NC}"
+      echo -e "${GREEN}Please wait at least five minutes and then re-start the MasterNode from the hot wallet.${NC}"
   else
     echo -e "Script terminated and Masternode not upgraded to latest version!"
     exit 1
