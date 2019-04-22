@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LUNARIUM_LATEST_RELEASE="https://github.com/LunariumCoin/lunarium/releases/download/v1.1.1/lunarium-1.1.1-x86_64-linux-gnu.tar.gz"
+LUNARIUM_LATEST_RELEASE="https://github.com/LunariumCoin/lunarium/releases/download/v1.2.0/lunarium-1.2.0-x86_64-linux-gnu.tar.gz"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
