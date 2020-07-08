@@ -1,13 +1,13 @@
 #!/bin/bash
 
-LUNARIUM_LATEST_RELEASE="https://github.com/LunariumCoin/lunarium/releases/download/v1.2.0/lunarium-1.2.0-x86_64-linux-gnu.tar.gz"
+LUNARIUM_LATEST_RELEASE="https://github.com/LunariumCoin/lunarium/releases/download/v1.3.0/lunarium-1.3.0-x86_64-linux-gnu.tar.gz"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
 function checks() {
-if [[ $(lsb_release -d) != *16.04* ]]; then
-  echo -e "${RED}You are not running Ubuntu 16.04. Installation is cancelled.${NC}"
+if [[ $(lsb_release -d) != *18.04* ]] || [[ $(lsb_release -d) != *20.04* ]]; then
+  echo -e "${RED}You are not running Ubuntu 18.04 or 20.04. Installation is cancelled.${NC}"
   exit 1
 fi
 
